@@ -13,8 +13,9 @@ first_course_programming
 * [Dpaste](https://dpaste.de/) - предназначен для передачи кода
 * [Pastebin](https://pastebin.com/) - предназначен для передачи кода, но менее удобен
 * [Руководство по стилю написания кода на С](https://cs50.readthedocs.io/style/c/)
+* [Лекции и задания](https://drive.google.com/drive/folders/1Ak_KUllhSS9cN0CvasTZtLKBZ_HqTpZ7?usp=sharing)
 ##### Репозитории хороших  людей:
 1. [Алексей Шуров](https://github.com/alexiskhb)
 2. [Александр Кленин](https://github.com/klenin)
-3. [Игорь Блинов](https://github.com/FooBarrior)
-4. [Ни](https://github.com/FooBarrior)
+3. [Игорь Блинов](h)
+4. [Александр Матафонов](https://vk.com/mafandv)(ВК)
