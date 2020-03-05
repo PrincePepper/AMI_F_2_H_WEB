@@ -1,4 +1,3 @@
-# first_course_programming
 first_course_programming
 =====================
 ###### ***основные программы по Web - программированию***
