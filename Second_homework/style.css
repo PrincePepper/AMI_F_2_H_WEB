@@ -1,0 +1,37 @@
+.boby-style {
+    /*bgcolor="#000000" link="#FFFFFF" text="#FFFFFF" vlink="#FF0004"*/
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: Forward, sans-serif;
+    vertical-align: center;
+    horiz-align: center;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #a72849;
+    font-family: Roboto, "Helvetica Neue", serif;
+}
+
+h3 {
+    font-family: "Helvetica Neue", serif;
+    font-style: italic;
+}
+
+p {
+    text-align: center;
+}
+
+.audio-block {
+    text-align: center;
+
+}
+
+.block {
+    width: 25%;
+    margin: auto;
+}
+
+.name_author {
+    text-align: right;
+}
