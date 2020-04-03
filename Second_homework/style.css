@@ -1,16 +1,22 @@
 .boby-style {
     /*bgcolor="#000000" link="#FFFFFF" text="#FFFFFF" vlink="#FF0004"*/
-    background-color: #000000;
+    background-color: #0d0d0d;
     color: #FFFFFF;
     font-family: Forward, sans-serif;
     vertical-align: center;
     horiz-align: center;
 }
 
-h1, h2 {
+h1 {
     text-align: center;
-    color: #a72849;
+    color: #ea4867;
     font-family: Roboto, "Helvetica Neue", serif;
+}
+
+h2 {
+    color: #ea4867;
+    font-family: "Helvetica Neue", serif;
+    font-style: italic;
 }
 
 h3 {
@@ -22,16 +28,47 @@ p {
     text-align: center;
 }
 
+ul {
+    list-style: square outside;
+}
+
 .audio-block {
     text-align: center;
 
 }
 
-.block {
+.block-poem {
     width: 25%;
     margin: auto;
 }
 
-.name_author {
+.block-me {
+    width: 90%;
+    margin: auto auto;
+}
+
+.name-author {
     text-align: right;
+}
+
+#hr-poem {
+    width: 95%;
+    height: 3px;
+    margin: auto auto 50px;
+    border-style: solid;
+    color: #ea4867;
+    background-color: #ea4867;
+}
+
+
+.img-block-me {
+    float: left;
+    height: 300px;
+    width: auto;
+
+    margin: 0 10px auto auto;
+}
+
+div ul {
+    margin: auto;
 }
