@@ -6,7 +6,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-    width: 0.5rem;
+    width: 0.3rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -23,11 +23,13 @@ header {
     background-color: #ea4867;
     width: 100%;
     margin: auto auto 10px;
-    height: 50px;
+    height: 8vmin;
+    min-height: 4vmin;
+    z-index: 1;
 }
 
 main {
-
+    z-index: 0;
 }
 
 footer {
@@ -104,7 +106,7 @@ a {
 
 /*navigation bar*/
 
-nav ul {
+nav.navigation-full ul {
     padding: 0;
     margin: 0;
     list-style: none;
@@ -113,16 +115,16 @@ nav ul {
     text-align: center;
 }
 
-nav ul ul {
+nav.navigation-full ul ul {
     display: none;
     position: absolute;
 }
 
-nav ul li:hover > ul {
+nav.navigation-full ul li:hover > ul {
     display: inherit;
 }
 
-nav ul ul li {
+nav.navigation-full ul ul li {
     padding: 10px 10px 10px 0;
     min-width: 100px;
     display: list-item;
@@ -131,13 +133,13 @@ nav ul ul li {
 
 }
 
-nav ul ul ul {
+nav.navigation-full ul ul ul {
     position: absolute;
     top: 0;
     left: 100%;
 }
 
-nav ul li a {
+nav.navigation-full ul li a {
     color: #FFFFFF;
 }
 
@@ -147,9 +149,10 @@ div li {
 
 .menu {
     font-size: 40px;
+    color: #FFFFFF;
 }
 
-nav ul ul li:hover { /* цвет padding при наведении*/
+nav.navigation-full ul ul li:hover { /* цвет padding при наведении*/
     background-color: #14ea77;
 }
 
@@ -161,9 +164,11 @@ nav ul ul li:hover { /* цвет padding при наведении*/
     border-radius: 0 0 10px 10px;
 }
 
-/*---------------*/
+/*--------------------------------------------*/
 
+/*отображение при экране больше 960 пикселей*/
 @media screen and (min-width: 960px ) {
+
     .flexbox {
         margin: auto;
         width: 100%;
@@ -171,6 +176,58 @@ nav ul ul li:hover { /* цвет padding при наведении*/
         align-items: center;
         justify-content: center
     }
+
+    .navigation-mini {
+        display: none;
+    }
+}
+
+/*отображение при экране меньше 960 пикселей*/
+@media screen and (max-width: 960px ) {
+    .navigation-full {
+        display: none;
+    }
+
+    .menu2 {
+        font-size: 5vmin;
+        color: #FFFFFF;
+        z-index: 1;
+    }
+
+    .name-menu {
+        font-size: 3vmin;
+        color: #FFFFFF;
+    }
+
+    nav.navigation-mini ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+    }
+
+    nav.navigation-mini ul ul {
+        display: none;
+    }
+
+    nav.navigation-mini ul li:hover > ul {
+        display: inherit;
+    }
+
+    nav.navigation-mini ul ul li {
+        display: list-item;
+        position: relative;
+        background-color: #ea4867;
+    }
+
+    nav.navigation-mini ul ul ul {
+
+    }
+
+    nav.navigation-mini ul li a {
+        color: #FFFFFF;
+    }
+
 }
 
 
@@ -270,6 +327,7 @@ div.right ul {
     width: 560px;
     height: 315px;
     border: 5px solid white;
+    margin: 50px 0 0 0;
 }
 
 /*---------------*/
