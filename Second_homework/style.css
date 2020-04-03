@@ -63,6 +63,9 @@ ul {
     list-style: square outside;
 }
 
+a {
+    text-decoration: none;
+}
 
 .audio-block {
     text-align: center;
@@ -102,12 +105,12 @@ ul {
 /*navigation bar*/
 
 nav ul {
-    padding: initial;
+    padding: 0;
     margin: 0;
     list-style: none;
     position: relative;
     display: flex;
-    z-index: 1;
+    text-align: center;
 }
 
 nav ul ul {
@@ -120,22 +123,26 @@ nav ul li:hover > ul {
 }
 
 nav ul ul li {
-    padding: 15px 15px 15px 15px;
-    min-width: 130px;
+    padding: 10px 10px 10px 0;
+    min-width: 100px;
     display: list-item;
     position: relative;
     background-color: #ea4867;
+
 }
 
 nav ul ul ul {
+    position: absolute;
     top: 0;
     left: 100%;
 }
 
 nav ul li a {
     color: #FFFFFF;
-    text-decoration: none;
-    text-align: center;
+}
+
+div li {
+    margin: auto;
 }
 
 .menu {
@@ -145,7 +152,6 @@ nav ul li a {
 nav ul ul li:hover { /* цвет padding при наведении*/
     background-color: #14ea77;
 }
-
 
 .border-radius-start { /* закругление верхов*/
     border-radius: 0 10px 0 0;
