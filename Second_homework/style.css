@@ -22,7 +22,7 @@ body::-webkit-scrollbar-thumb {
 header {
     background-color: #ea4867;
     width: 100%;
-    margin: auto auto 10px;
+    margin: auto auto;
     height: 8vmin;
     min-height: 4vmin;
     z-index: 1;
@@ -33,11 +33,9 @@ main {
 }
 
 footer {
-    width: 90%;
-    margin: 10px auto auto;
+    width: 95%;
     text-align: right;
     color: #ea4867;
-    flex-direction: column;
 }
 
 h1 {
@@ -50,6 +48,7 @@ h2 {
     font-style: italic;
     color: #ea4867;
     font-family: "Helvetica Neue", serif;
+    margin: 0;
 }
 
 h3 {
@@ -59,6 +58,8 @@ h3 {
 
 p {
     text-align: center;
+    font-size: 3vmin;
+    margin: 1vw;
 }
 
 ul {
@@ -105,6 +106,10 @@ a {
 }
 
 /*navigation bar*/
+nav.navigation-full {
+    height: 8vmin;
+    min-height: 4vmin;
+}
 
 nav.navigation-full ul {
     padding: 0;
@@ -113,6 +118,8 @@ nav.navigation-full ul {
     position: relative;
     display: flex;
     text-align: center;
+    height: 8vmin;
+    min-height: 4vmin;
 }
 
 nav.navigation-full ul ul {
@@ -186,12 +193,13 @@ nav.navigation-full ul ul li:hover { /* цвет padding при наведени
 @media screen and (max-width: 960px ) {
     .navigation-full {
         display: none;
+        z-index: 0;
     }
 
     .menu2 {
         font-size: 5vmin;
         color: #FFFFFF;
-        z-index: 1;
+
     }
 
     .name-menu {
@@ -199,15 +207,28 @@ nav.navigation-full ul ul li:hover { /* цвет padding при наведени
         color: #FFFFFF;
     }
 
+    nav.navigation-mini {
+        height: 8vmin;
+        min-height: 4vmin;
+    }
+    
     nav.navigation-mini ul {
-        margin: 0;
+        margin: auto;
         padding: 0;
         list-style: none;
-        text-align: center;
+        height: 8vmin;
+        min-height: 4vmin;
     }
 
     nav.navigation-mini ul ul {
         display: none;
+        text-align: center;
+    }
+
+    nav.navigation-mini ul li {
+        height: 8vmin;
+        min-height: 4vmin;
+        margin: auto;
     }
 
     nav.navigation-mini ul li:hover > ul {
@@ -218,50 +239,18 @@ nav.navigation-full ul ul li:hover { /* цвет padding при наведени
         display: list-item;
         position: relative;
         background-color: #ea4867;
+        height: 13vw;
+        z-index: 1;
     }
 
-    nav.navigation-mini ul ul ul {
-
+    nav.navigation-mini div ul li ul li:hover { /* цвет padding при наведении*/
+        background-color: #14ea77;
     }
 
-    nav.navigation-mini ul li a {
-        color: #FFFFFF;
+    div li {
+        margin: auto;
     }
-
 }
-
-
-/*@media screen and (min-width: 800px) {*/
-/*    .show-menu-btn, .hide-menu-btn {*/
-/*        display: block;*/
-/*    }*/
-/*    .flexbox {*/
-/*        margin: auto;*/
-/*        width: 100%;*/
-/*        display: flex;*/
-/*        align-items: center;*/
-/*        justify-content: center*/
-/*    }*/
-/*    .navigation-mini {*/
-/*        position: fixed;*/
-/*        width: 100%;*/
-/*        height: 100vh;*/
-/*        background: #333;*/
-/*        right: -100%;*/
-/*        top: 0;*/
-/*        text-align: center;*/
-/*        padding: 80px 0;*/
-/*        line-height: normal;*/
-/*        transition: 0.7s;*/
-
-/*    }*/
-
-/*    .menu-hide a {*/
-/*        display: block;*/
-/*        padding: 20px;*/
-/*    }*/
-
-/*}*/
 
 .left {
     flex: 1 1 30%;
@@ -293,13 +282,13 @@ div.left ul {
 .image {
     width: 100%;
     max-width: 250px;
-    cursor: pointer;
     margin: 10px 10px 10px 10px;
-    filter: grayscale(85%);
+    filter: grayscale(100%);
+    transition: 0.5s;
 }
 
 .image:hover {
-    filter: brightness(100%);
+    filter: grayscale(0);
 }
 
 /*---------------*/
@@ -323,7 +312,13 @@ div.right ul {
     padding: 0;
 }
 
-.video {
+#video-up {
+    width: 560px;
+    height: 315px;
+    border: 5px solid white;
+}
+
+#video-end {
     width: 560px;
     height: 315px;
     border: 5px solid white;
