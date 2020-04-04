@@ -48,6 +48,13 @@ footer {
     text-align: right;
     color: #ea4867;
     height: 5vmax;
+    position: relative;
+}
+footer h2{
+    top: 50%;
+    left: 80%;
+    right: 5%;
+    position: absolute;
 }
 
 h1 {
