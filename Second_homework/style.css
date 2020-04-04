@@ -20,22 +20,34 @@ body::-webkit-scrollbar-thumb {
 /*----------------------------*/
 
 header {
-    background-color: #ea4867;
     width: 100%;
-    margin: auto auto;
     height: 8vmin;
     min-height: 4vmin;
-    z-index: 1;
-}
-
-main {
+    top: 0;
     z-index: 0;
 }
 
+.navigation-mini, .navigation-full {
+    width: 100%;
+    height: 8vmin;
+    min-height: 4vmin;
+    background-color: #ea4867;
+    position: fixed;
+    z-index: 1;
+}
+
+/*--------------------------------*/
+main {
+    z-index: 0;
+    position: relative;
+}
+
 footer {
-    width: 95%;
+    background-color: #1a1a1a;
+    width: 100%;
     text-align: right;
     color: #ea4867;
+    height: 5vmax;
 }
 
 h1 {
@@ -58,8 +70,6 @@ h3 {
 
 p {
     text-align: center;
-    font-size: 3vmin;
-    margin: 1vw;
 }
 
 ul {
@@ -70,33 +80,57 @@ a {
     text-decoration: none;
 }
 
-.audio-block {
-    text-align: center;
+/*------------------------*/
 
-}
 
-.block-poem {
-    width: 25%;
-    margin: auto;
-}
-
-.block-me {
-    width: 90%;
-    margin: auto auto;
-}
-
-.name-author {
-    text-align: right;
-}
+/*страница поэмы одиночной*/
 
 #hr-poem {
-    width: 95%;
+    width: 100%;
     height: 3px;
-    margin: auto auto 50px;
+    margin: auto auto 15px;
     border-style: solid;
     color: #ea4867;
     background-color: #ea4867;
+
 }
+
+#block-poem {
+    width: 300px;
+    margin: auto;
+
+}
+
+#audio-block {
+    text-align: center;
+    position: absolute;
+    left: 25%;
+    right: 25%;
+}
+
+#name-author {
+    text-align: right;
+}
+
+/*----------------------------*/
+
+/*Встроекнная поэма*/
+
+.block {
+    width: 50%;
+    margin: auto;
+}
+
+.name {
+    font-style: italic;
+    text-align: right;
+}
+
+audio {
+    text-align: center;
+}
+
+/*----------------------------*/
 
 .img-block-me {
     float: left;
@@ -104,6 +138,11 @@ a {
     width: auto;
     margin: 0 10px auto auto;
 }
+
+.text{
+    font-size: 2vmin;
+}
+/*----------------------------*/
 
 /*navigation bar*/
 nav.navigation-full {
@@ -174,7 +213,7 @@ nav.navigation-full ul ul li:hover { /* цвет padding при наведени
 /*--------------------------------------------*/
 
 /*отображение при экране больше 960 пикселей*/
-@media screen and (min-width: 960px ) {
+@media screen and (min-width: 1200px ) {
 
     .flexbox {
         margin: auto;
@@ -190,7 +229,7 @@ nav.navigation-full ul ul li:hover { /* цвет padding при наведени
 }
 
 /*отображение при экране меньше 960 пикселей*/
-@media screen and (max-width: 960px ) {
+@media screen and (max-width: 1200px ) {
     .navigation-full {
         display: none;
         z-index: 0;
@@ -267,6 +306,11 @@ nav.navigation-full ul ul li:hover { /* цвет padding при наведени
     text-align: center;
 }
 
+.text-in-column {
+    font-size: 3vmin;
+    margin: 1vw;
+}
+
 /*-------------------*/
 
 /*left flex*/
@@ -313,20 +357,20 @@ div.right ul {
 }
 
 #video-up {
-    width: 560px;
-    height: 315px;
+    width: 85%;
+    height: 15vmax;
     border: 5px solid white;
+    margin: 50px 0 0 0;
 }
 
 #video-end {
-    width: 560px;
-    height: 315px;
+    width: 85%;
+    height: 15vmax;
     border: 5px solid white;
     margin: 50px 0 0 0;
 }
 
 /*---------------*/
-
 
 .block_scroll {
     margin-top: 30px;
@@ -336,29 +380,60 @@ div.right ul {
 }
 
 
-/*@media print {*/
-/*    body {*/
-/*        font-family: Times, 'Times New Roman', serif;*/
-/*        font-size: 20px;*/
-/*    }*/
+@media print {
+    @page {
+        margin: 1cm;
+    }
 
-/*    .block_scroll{*/
-/*        margin: 0;*/
-/*        overflow: hidden;*/
-/*        width: 100%;*/
-/*        height: 100%;*/
+    body {
+        margin: 0;
+        padding: 0;
+        line-height: 1.4em;
+        word-spacing: 1px;
+        letter-spacing: 0.2px;
+        color: #000;
+        font-family: Times, 'Times New Roman', serif;
+        font-size: 20px;
+    }
 
-/*    }*/
+    #logo, #catnavi, .topnavi, .more-link, .navigation, #sidebartop, #related, #social, #sponsors, .tabs, #allpost,
+    .toolbar, .splitbox, #commentform, #commentabs .idTabs, .postmeta-content .comments, #respond h3, .tag, .footerlinks {
+        display: none;
+    }
 
-/*    p, h2, a{*/
-/*        color: black !important;*/
-/*    }*/
+    .block_scroll {
+        margin: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
 
-/*    div.block_myself div{*/
-/*        text-align: justify;*/
-/*    }*/
+    }
 
-/*    h1, div.left_column, div.right_column, img, hr, nav, footer,  .gradient_text{*/
-/*        display: none;*/
-/*    }*/
-/*}*/
+    a:link, a:visited {
+        background: transparent;
+        color: #333;
+        text-decoration: none;
+    }
+
+    a:link[href^="http://"]:after, a[href^="http://"]:visited:after {
+        content: " (" attr(href) ") ";
+        font-size: 11px;
+    }
+
+    a[href^="http://"] {
+        color: #000;
+    }
+
+    h1, p, h2, a {
+        color: black !important;
+    }
+
+    div.block_myself div {
+        text-align: justify;
+    }
+
+    div.left, div.right, hr, nav, footer, audio {
+        display: none;
+    }
+
+}
