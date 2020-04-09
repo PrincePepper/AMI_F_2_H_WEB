@@ -43,20 +43,22 @@ main {
 }
 
 footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     background-color: #1a1a1a;
     width: 100%;
-    text-align: right;
+    text-align: center;
     color: #ea4867;
-    height: 5vmax;
-    position: relative;
+    height: 16vmin;
+    min-height: 7vmin;
+
+    margin: 0;
+    padding: 0;
 }
 
-footer h2 {
-    top: 50%;
-    left: 80%;
-    right: 5%;
-    position: absolute;
-}
 
 h1 {
     text-align: center;
@@ -294,15 +296,16 @@ nav.navigation-full ul ul li:hover { /* цвет padding при наведени
 
     nav.navigation-mini ul ul li {
         display: list-item;
-        position: relative;
         background-color: #ea4867;
-        height: 13vw;
+        height: 12vw;
         z-index: 1;
+        line-height: 12vw;
     }
 
-    nav.navigation-mini div ul li ul li:hover { /* цвет padding при наведении*/
+    nav.navigation-mini ul li ul li:hover { /* цвет padding при наведении*/
         background-color: #14ea77;
     }
+
 
     div li {
         margin: auto;
@@ -388,15 +391,71 @@ div.right ul {
     margin: 50px 0 0 0;
 }
 
-/*---------------*/
+/*--footer----*/
+footer h2 {
 
-.block_scroll {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    height: 500px;
-    overflow-y: scroll;
+}
+footer div.sm{
+    margin-top: 16px;
+}
+footer hr {
+    width: 100%;
+    border: 0;
+}
+footer a{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0 5vw;
+    width: 3.5vw;
+    height: 3.5vw;
+    min-height: 2vw;
+    background-color: #ea4867;
+    border-radius: 100%;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3),
+    -6px -6px 12px rgba(0, 0, 0, 0.3);
+    font-size: 2vw;
+    transition: 0.25s linear;
 }
 
+footer a:hover{
+    transform: scale(1.3);
+    border-radius: 50%;
+}
+
+footer a i::before{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    line-height: 3.5vw;
+    min-height: 2vw;
+    top: 0;
+    left: 0;
+    background-size: 200% 200%;
+    background-position: 75% 75%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background .25s linear;
+}
+
+footer a:hover i::before{
+    background-position: 0 0;
+}
+
+footer .fa-instagram::before{
+    background-image: linear-gradient(to bottom right, #ffffff 50%,#1a1a1a 10%);
+}
+
+footer .fa-youtube::before{
+    background-image: linear-gradient(to bottom right,#ffffff 50%,#1a1a1a 10%);
+}
+
+footer .fa-telegram::before{
+    background-image: linear-gradient(to bottom right,#ffffff 50%,#1a1a1a 10%);
+}
+
+/*---------------*/
 
 @media print {
     @page {
@@ -417,14 +476,6 @@ div.right ul {
     #logo, #catnavi, .topnavi, .more-link, .navigation, #sidebartop, #related, #social, #sponsors, .tabs, #allpost,
     .toolbar, .splitbox, #commentform, #commentabs .idTabs, .postmeta-content .comments, #respond h3, .tag, .footerlinks {
         display: none;
-    }
-
-    .block_scroll {
-        margin: 0;
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-
     }
 
     a:link, a:visited {
