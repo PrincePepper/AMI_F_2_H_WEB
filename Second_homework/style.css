@@ -14,7 +14,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #ea4867;
+    background-color: #eb4b4d;
 }
 
 /*----------------------------*/
@@ -22,15 +22,14 @@ body::-webkit-scrollbar-thumb {
 header {
     width: 100%;
     height: 8vmin;
-    min-height: 4vmin;
+    min-height: 40px;
     top: 0;
 }
 
 .navigation-mini, .navigation-full {
     width: 100%;
-    height: 8vmin;
-    min-height: 4vmin;
-    background-color: #ea4867;
+
+    background-color: #eb4b4d;
     position: fixed;
     z-index: 1;
 }
@@ -47,11 +46,11 @@ footer {
     align-items: center;
     justify-content: center;
     position: relative;
-    background-color: #1a1a1a;
+    background-color: #152137;
     width: 100%;
     text-align: center;
-    color: #ea4867;
-    height: 16vmin;
+
+    height: 100%;
     min-height: 7vmin;
 
     margin: 0;
@@ -61,13 +60,13 @@ footer {
 
 h1 {
     text-align: center;
-    color: #ea4867;
+    color: #eb4b4d;
     font-family: Roboto, "Helvetica Neue", serif;
 }
 
 h2 {
     font-style: italic;
-    color: #ea4867;
+    color: #eb4b4d;
     font-family: "Helvetica Neue", serif;
     margin: 0;
 }
@@ -103,8 +102,8 @@ div li {
     height: 3px;
     margin: auto auto 15px;
     border-style: solid;
-    color: #ea4867;
-    background-color: #ea4867;
+    color: #eb4b4d;
+    background-color: #eb4b4d;
 
 }
 
@@ -154,13 +153,13 @@ audio {
 
 .text {
     display: inline-block;
-    font-size: 2vmin;
+    font-size: 20px;
     text-align: start;
     padding-bottom: 1vmin;
 }
 
 .text-2 {
-    font-size: 2vmin;
+    font-size: 20px;
     text-align: start;
     display: block;
 }
@@ -168,10 +167,6 @@ audio {
 /*----------------------------*/
 
 /*navigation bar*/
-nav.navigation-full {
-    height: 8vmin;
-    min-height: 4vmin;
-}
 
 nav.navigation-full ul {
     padding: 0;
@@ -181,7 +176,7 @@ nav.navigation-full ul {
     display: flex;
     text-align: center;
     height: 8vmin;
-    min-height: 4vmin;
+    min-height: 40px;
 }
 
 nav.navigation-full ul ul {
@@ -198,7 +193,7 @@ nav.navigation-full ul ul li {
     min-width: 100px;
     display: list-item;
     position: relative;
-    background-color: #ea4867;
+    background-color: #eb4b4d;
 
 }
 
@@ -218,7 +213,7 @@ nav.navigation-full ul li a {
 }
 
 nav.navigation-full ul ul li:hover { /* цвет padding при наведении*/
-    background-color: #14ea77;
+    background-color: #f7b94a;
 }
 
 .border-radius-start { /* закругление верхов*/
@@ -255,28 +250,34 @@ nav.navigation-full ul ul li:hover { /* цвет padding при наведени
     }
 
     .menu2 {
-        font-size: 5vmin;
+        font-size: 5vh;
         color: #FFFFFF;
 
     }
 
     .name-menu {
-        font-size: 3vmin;
+        font-size: 3vh;
         color: #FFFFFF;
     }
 
+    .name-ex {
+        font-size: 3vh;
+        color: #FFFFFF;
+    }
+    nav.navigation-mini .ex { /* цвет padding при наведении*/
+        background-color: #f7b94a;
+    }
     nav.navigation-mini {
         text-align: center;
-        height: 8vmin;
-        min-height: 4vmin;
+        height: 8vh;
+        min-height: 4vh;
     }
 
     nav.navigation-mini ul {
         margin: auto;
         list-style: none;
-        height: 8vmin;
-        min-height: 4vmin;
-        line-height: 7vmin;
+        height: 10vh;
+        min-height: 3vh;
         padding: 0;
     }
 
@@ -286,8 +287,9 @@ nav.navigation-full ul ul li:hover { /* цвет padding при наведени
     }
 
     nav.navigation-mini ul li {
-        height: 8vmin;
-        min-height: 4vmin;
+        height: 10vh;
+        min-height: 3vh;
+
         margin: auto;
     }
 
@@ -297,20 +299,41 @@ nav.navigation-full ul ul li:hover { /* цвет padding при наведени
 
     nav.navigation-mini ul ul li {
         display: list-item;
-        background-color: #ea4867;
-        height: 12vw;
+        background-color: #eb4b4d;
+
+        line-height: 10vh;
         z-index: 1;
-        line-height: 12vw;
+
     }
 
     nav.navigation-mini ul li ul li:hover { /* цвет padding при наведении*/
-        background-color: #14ea77;
+        background-color: #f7b94a;
     }
-
 
     div li {
         margin: auto;
     }
+    .video-up {
+        width: 85%;
+        height: 15vmax;
+        border: 5px solid #eb4b4d;
+        margin: 50px 0 0 0;
+    }
+
+    .video-end {
+        width: 0;
+        height: 15vmax;
+        border: 5px solid #eb4b4d;
+        margin: 0 0 0 0;
+    }
+
+}
+
+@media screen and (max-width: 600px ) {
+    div.left, audio, .left,.right{
+        display: none;
+    }
+
 }
 
 .left {
@@ -378,14 +401,14 @@ div.right ul {
     padding: 0;
 }
 
-#video-up {
+.video-up {
     width: 85%;
     height: 15vmax;
     border: 5px solid white;
     margin: 50px 0 0 0;
 }
 
-#video-end {
+.video-end {
     width: 85%;
     height: 15vmax;
     border: 5px solid white;
@@ -395,38 +418,44 @@ div.right ul {
 /*--footer----*/
 footer p {
     font-style: normal;
-    color: #ea4867;
+    color: #ffffff;
 }
-footer div.sm{
+
+footer div.sm {
     margin-top: 16px;
 }
+
 footer hr {
     width: 100%;
     border: 0;
 }
-footer a{
+
+footer a {
     position: relative;
     display: inline-block;
     overflow: hidden;
     margin: 0 5vw;
-    min-width: 3vw;
-    max-width: 7vw;
-    min-height: 3vw;
-    max-height: 7vw;
-    background-color: #ea4867;
+    min-width: 4vh;
+    max-width: 10vh;
+    min-height: 4vh;
+    max-height: 10vh;
+    background-color: #438d98;
     border-radius: 100%;
     box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3),
     -6px -6px 12px rgba(0, 0, 0, 0.3);
-    font-size: 2vw;
+    transform: scale(1.5);
+    min-font-size: 4vh;
+    max-font-size: 10vh;
+    font-size: 2.7vh;
     transition: 0.25s linear;
 }
 
-footer a:hover{
+footer a:hover {
     transform: scale(1.3);
     border-radius: 50%;
 }
 
-footer a i::before{
+footer a i::before {
     position: absolute;
     text-align: center;
     width: 100%;
@@ -441,20 +470,20 @@ footer a i::before{
     transition: background .25s linear;
 }
 
-footer a:hover i::before{
+footer a:hover i::before {
     background-position: 0 0;
 }
 
-footer .fa-instagram::before{
-    background-image: linear-gradient(to bottom right, #ffffff 40%,#1a1a1a 10%);
+footer .fa-instagram::before {
+    background-image: linear-gradient(to bottom right, #ffffff 40%, #152137 10%);
 }
 
-footer .fa-youtube::before{
-    background-image: linear-gradient(to bottom right,#ffffff 40%,#1a1a1a 10%);
+footer .fa-youtube::before {
+    background-image: linear-gradient(to bottom right, #ffffff 40%, #152137 10%);
 }
 
-footer .fa-telegram::before{
-    background-image: linear-gradient(to bottom right,#ffffff 40%,#1a1a1a 10%);
+footer .fa-telegram::before {
+    background-image: linear-gradient(to bottom right, #ffffff 40%, #152137 10%);
 }
 
 /*---------------*/
@@ -469,10 +498,10 @@ footer .fa-telegram::before{
         padding: 0;
         line-height: 1.4em;
         word-spacing: 1px;
-        letter-spacing: 0.2px;
+        letter-spacing: 2px;
         color: #000;
         font-family: Times, 'Times New Roman', serif;
-        font-size: 20px;
+        font-size: 16px;
     }
 
     #logo, #catnavi, .topnavi, .more-link, .navigation, #sidebartop, #related, #social, #sponsors, .tabs, #allpost,
