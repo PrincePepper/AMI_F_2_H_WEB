@@ -39,8 +39,6 @@ main {
     z-index: 0;
     position: relative;
     height: 100%;
-    display: grid;
-    grid-template-rows: 1fr auto;
 }
 
 footer {
@@ -56,11 +54,9 @@ footer {
     height: 100%;
     min-height: 7vmin;
 
-    margin: 0;
+    margin-top: 15px;
     padding: 0;
 
-    grid-row-start: 2;
-    grid-row-end: 3;
 }
 
 
@@ -418,7 +414,7 @@ footer p {
 }
 
 footer div.sm {
-    margin-top: 16px;
+    margin-top: 30px;
 }
 
 footer hr {
