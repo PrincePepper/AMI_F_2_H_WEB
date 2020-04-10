@@ -38,6 +38,9 @@ header {
 main {
     z-index: 0;
     position: relative;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
 }
 
 footer {
@@ -55,6 +58,9 @@ footer {
 
     margin: 0;
     padding: 0;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
 
 
@@ -213,7 +219,7 @@ nav.navigation-full ul li a {
 }
 
 nav.navigation-full ul ul li:hover { /* цвет padding при наведении*/
-    background-color: #f7b94a;
+    background-color: #436298;
 }
 
 .border-radius-start { /* закругление верхов*/
@@ -249,6 +255,10 @@ nav.navigation-full ul ul li:hover { /* цвет padding при наведени
         z-index: 0;
     }
 
+    .flex-mode{
+        display: flex;
+    }
+
     .menu2 {
         font-size: 5vh;
         color: #FFFFFF;
@@ -260,13 +270,20 @@ nav.navigation-full ul ul li:hover { /* цвет padding при наведени
         color: #FFFFFF;
     }
 
-    .name-ex {
-        font-size: 3vh;
+    .text-in-column {
+        font-size: 3vw;
+        padding-top: 5vw;
+    }
+
+    .ex {
+        font-size: 4vh;
         color: #FFFFFF;
     }
+
     nav.navigation-mini .ex { /* цвет padding при наведении*/
-        background-color: #f7b94a;
+        background-color: #436298;
     }
+
     nav.navigation-mini {
         text-align: center;
         height: 8vh;
@@ -307,33 +324,12 @@ nav.navigation-full ul ul li:hover { /* цвет padding при наведени
     }
 
     nav.navigation-mini ul li ul li:hover { /* цвет padding при наведении*/
-        background-color: #f7b94a;
+        background-color: #436298;
     }
 
     div li {
         margin: auto;
     }
-    .video-up {
-        width: 85%;
-        height: 15vmax;
-        border: 5px solid #eb4b4d;
-        margin: 50px 0 0 0;
-    }
-
-    .video-end {
-        width: 0;
-        height: 15vmax;
-        border: 5px solid #eb4b4d;
-        margin: 0 0 0 0;
-    }
-
-}
-
-@media screen and (max-width: 600px ) {
-    div.left, audio, .left,.right{
-        display: none;
-    }
-
 }
 
 .left {
@@ -418,7 +414,7 @@ div.right ul {
 /*--footer----*/
 footer p {
     font-style: normal;
-    color: #ffffff;
+    color: #3c588c;
 }
 
 footer div.sm {
@@ -439,7 +435,7 @@ footer a {
     max-width: 10vh;
     min-height: 4vh;
     max-height: 10vh;
-    background-color: #438d98;
+    background-color: #436298;
     border-radius: 100%;
     box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3),
     -6px -6px 12px rgba(0, 0, 0, 0.3);
@@ -451,7 +447,7 @@ footer a {
 }
 
 footer a:hover {
-    transform: scale(1.3);
+    transform: scale(1.8);
     border-radius: 50%;
 }
 
