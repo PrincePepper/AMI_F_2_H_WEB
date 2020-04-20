@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<title>SEMEN</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- Подключаем Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/default.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+</head>
+
+<body>
+<!-- Подключаем jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Подключаем Bootstrap JS -->
+<script src="js/bootstrap.js"></script>
+<script src="js/default.js"></script>
+<!-- -----------Основной код----------- -->
+<!--экран загрузки-->
+<div class="loader-container">
+	<div class="spinner-border text-danger" role="status">
+		<span class="sr-only">Loading...</span>
+	</div>
+</div>
+
+<header>
+	<div class="full-header fixed-top">
+		<nav aria-label="breadcrumb" class="nav-breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item active" aria-current="page">Главная</li>
+			</ol>
+		</nav>
+		<nav class="def-nav mx-auto">
+			<ul class="nav">
+				<li class="nav-item mx-0">
+					<a class="nav-link active" href="html.html"><h2>SEMEN</h2></a>
+				</li>
+				<li class="nav-item mx-auto">
+					<a class="nav-link" href="#"><h2>СВЯЗАТЬСЯ</h2></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#"><h2>О СЕБЕ</h2></a>
+				</li>
+				<li class="nav-item  mx-0">
+					<a class="nav-link rounded-pill border" href="#"><h2>ПРОЕКТЫ</h2></a>
+				</li>
+			</ul>
+
+		</nav>
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-light alt-nav">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+			        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link active" href="#"><h2>ГЛАВНАЯ</h2></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><h2>СВЯЗАТЬСЯ</h2></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><h2>О СЕБЕ</h2></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><h2>ПРОЕКТЫ</h2></a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+
+</header>
+<main>
+	<div class="carousel-full">
+		<div class="text-typewriter">
+			<div class="typewriter">
+				<h1 class="first-typewriter">НЕТ. НИЧЕГО.</h1>
+				<h1 class="second-typewriter">НЕВОЗМОЖНОГО.</h1>
+			</div>
+		</div>
+		<div class="fact">
+			<div class="w-75 p-3 h-60 d-inline-block shadow-lg ">
+				<dl >
+					<dt>Факты</dt>
+					<dd>Студент 1 курса ДВФУ</dd>
+					<dd>6 год занимаюсь робототехникой</dd>
+					<dd>IT-разработчик стратап проекта</dd>
+					<dd>Фотограф</dd>
+					<dd>программист</dd>
+					<dt>Хобби</dt>
+					<dd>DJ`инг</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+
+	<div class="gradient">
+		<div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="png/first.png" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+					<img src="png/second.png" class="d-block w-100" alt="...">
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+<footer>
+	<div class="row">
+		<div class="col">
+			<h3 class="bd-footer-title"><a class="btn-link" href="#">Telegram</a></h3>
+			<p><a class="btn-link" href="#">Instagram</a></p>
+			<p><a class="btn-link" href="#">Вконтакте</a></p>
+			<p><a class="btn-link" href="#">Сайт</a></p>
+		</div>
+		<div class="col">
+			<h3 class="bd-footer-title"><a class="btn-link" href="#">Связаться</a></h3>
+			<h3 class="bd-footer-title"><a class="btn-link" href="#">Новости</a></h3>
+		</div>
+		<div class="col">
+			<h3 class="bd-footer-title"><a class="btn-link" href="#">О себе</a></h3>
+			<p><a class="btn-link" href="#">Факты</a></p>
+			<p><a class="btn-link" href="#">Компетенции</a></p>
+			<p><a class="btn-link" href="#">Работа</a></p>
+		</div>
+	</div>
+</footer>
+
+<script>
+    $(window).on("load", function () {
+        $(".loader-container").fadeOut(1000);
+    });
+</script>
+
+</body>
+</html>

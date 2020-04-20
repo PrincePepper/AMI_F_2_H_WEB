@@ -28,7 +28,6 @@ header {
 
 .navigation-mini, .navigation-full {
     width: 100%;
-
     background-color: #eb4b4d;
     position: fixed;
     z-index: 1;
