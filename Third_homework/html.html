@@ -38,7 +38,7 @@
 					<a class="nav-link active" href="html.html"><h2>SEMEN</h2></a>
 				</li>
 				<li class="nav-item mx-auto">
-					<a class="nav-link" href="#"><h2>СВЯЗАТЬСЯ</h2></a>
+					<a class="nav-link" href="html_contact.html"><h2>СВЯЗАТЬСЯ</h2></a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#"><h2>О СЕБЕ</h2></a>
@@ -76,7 +76,7 @@
 
 </header>
 <main>
-	<div class="carousel-full">
+	<div class="gradient">
 		<div class="text-typewriter">
 			<div class="typewriter">
 				<h1 class="first-typewriter">НЕТ. НИЧЕГО.</h1>
@@ -84,8 +84,8 @@
 			</div>
 		</div>
 		<div class="fact">
-			<div class="w-75 p-3 h-60 d-inline-block shadow-lg ">
-				<dl >
+			<div class="block-fact w-75 h-60 shadow-lg">
+				<dl class="align_center align-items-center">
 					<dt>Факты</dt>
 					<dd>Студент 1 курса ДВФУ</dd>
 					<dd>6 год занимаюсь робототехникой</dd>
@@ -97,9 +97,6 @@
 				</dl>
 			</div>
 		</div>
-	</div>
-
-	<div class="gradient">
 		<div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
@@ -111,34 +108,85 @@
 			</div>
 		</div>
 	</div>
+	<div class="competition">
+		<div>
+			<h1 class="text-in-column">КОМПЕТЕНЦИИ</h1>
+			<div class="row">
+				<div class="col">
+					<a href="https://vk.com/semensereda" target="_blank" data-toggle="tooltip"
+					   title="Нажми чтобы перейти во кладку">
+						<img src="png/photograph.png" class="image" alt="фотограф"/>
+					</a>
+				</div>
+				<div class="col">
+					<a href="https://github.com/PrincePepper" target="_blank" data-toggle="tooltip"
+					   title="Нажми чтобы перейти во кладку">
+						<img src="png/programmist.png" class="image" alt="программист"/>
+					</a>
+				</div>
+				<div class="col">
+					<a href="https://vk.com/rutechpark?w=wall-158058510_212" target="_blank" data-toggle="tooltip"
+					   title="Нажми чтобы перейти во кладку">
+						<img src="png/projectactivity.png" class="image" alt="бизнес"/>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </main>
 
 <footer>
 	<div class="row">
 		<div class="col">
-			<h3 class="bd-footer-title"><a class="btn-link" href="#">Telegram</a></h3>
-			<p><a class="btn-link" href="#">Instagram</a></p>
-			<p><a class="btn-link" href="#">Вконтакте</a></p>
-			<p><a class="btn-link" href="#">Сайт</a></p>
+			<h3 class="bd-footer-title"><a class="btn-link" href="https://teleg.run/princepepper" target="_blank">Telegram</a>
+			</h3>
+			<p><a class="btn-link" href="https://www.instagram.com/prince_pepper_official" target="_blank">Instagram</a>
+			</p>
+			<p><a class="btn-link" href="https://vk.com/princepepper" target="_blank">Вконтакте</a></p>
+			<p><a class="btn-link" href="https://ssereda.ru" target="_blank">Сайт</a></p>
 		</div>
 		<div class="col">
 			<h3 class="bd-footer-title"><a class="btn-link" href="#">Связаться</a></h3>
-			<h3 class="bd-footer-title"><a class="btn-link" href="#">Новости</a></h3>
+			<div data-toggle="modal" data-target="#myModal"><span class="badge badge-dark">В разработке</span>
+				<h3 class="bd-footer-title">Новости</h3></div>
 		</div>
 		<div class="col">
 			<h3 class="bd-footer-title"><a class="btn-link" href="#">О себе</a></h3>
 			<p><a class="btn-link" href="#">Факты</a></p>
 			<p><a class="btn-link" href="#">Компетенции</a></p>
+			<span class="badge badge-dark">В разработке</span>
 			<p><a class="btn-link" href="#">Работа</a></p>
 		</div>
 	</div>
+	<p>&copy; <?php echo date('Y');?> Семен Середа</p>
 </footer>
-
+<!-----------Скрипт загрузочного экрана---------------->
 <script>
     $(window).on("load", function () {
         $(".loader-container").fadeOut(1000);
     });
 </script>
+<!----------------------------------------------------->
+
+<!-----------------мрдальное окно---------------------->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel" style="color: black">НОВОСТИ</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body" style="color: black">
+				В данный момент данный блок в разработке.
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+			</div>
+		</div>
+	</div>
+</div>
 
 </body>
 </html>

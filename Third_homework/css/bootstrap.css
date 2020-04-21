@@ -4435,6 +4435,8 @@ input[type="button"].btn-block {
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
+    align-items: center;
+    padding-bottom: 10px;
 }
 
 .nav-link {
@@ -6735,7 +6737,7 @@ a.close.disabled {
 .carousel-fade .active.carousel-item-right {
     z-index: 0;
     opacity: 0;
-    transition: opacity 0s 1s;
+    transition: opacity 1s;
 }
 
 @media (prefers-reduced-motion: reduce) {

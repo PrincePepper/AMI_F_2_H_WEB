@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<title>SEMEN</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- Подключаем Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/default.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+</head>
+
+<body>
+<!-- Подключаем jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Подключаем Bootstrap JS -->
+<script src="js/bootstrap.js"></script>
+<script src="js/default.js"></script>
+<!-- -----------Основной код----------- -->
+<header>
+	<div class="full-header fixed-top">
+		<nav aria-label="breadcrumb" class="nav-breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item active" aria-current="page">Главная</li>
+			</ol>
+		</nav>
+		<nav class="def-nav mx-auto">
+			<ul class="nav">
+				<li class="nav-item mx-0">
+					<a class="nav-link" href="html.html"><h2>SEMEN</h2></a>
+				</li>
+				<li class="nav-item mx-auto">
+					<a class="nav-link active" href="#"><h2>СВЯЗАТЬСЯ</h2></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#"><h2>О СЕБЕ</h2></a>
+				</li>
+				<li class="nav-item  mx-0">
+					<a class="nav-link rounded-pill border" href="#"><h2>ПРОЕКТЫ</h2></a>
+				</li>
+			</ul>
+
+		</nav>
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-light alt-nav">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+			        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="#"><h2>ГЛАВНАЯ</h2></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="#"><h2>СВЯЗАТЬСЯ</h2></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><h2>О СЕБЕ</h2></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><h2>ПРОЕКТЫ</h2></a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+
+</header>
+<main>
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col">
+				<ul class="social-ul">
+					<li>
+						<a href="https://teleg.run/princepepper" target="_blank">
+							<img alt="telegram" src="png/telegram.png"/>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.instagram.com/prince_pepper_official/" target="_blank">
+							<img alt="instagram" src="png/instagram.png"/>
+						</a>
+					</li>
+					<li>
+						<a href="https://vk.com/princepepper" target="_blank">
+							<img alt="vk" src="png/vk.png"/>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col">
+				<div class="forms">
+					<form action="php/action_page.php">
+						<div class="contain">
+							<h3>Сообщи почту и я вам отвечу</h3>
+							<hr>
+							<div>
+								<label for="name"><b>Имя</b></label>
+								<input class="w-75 p-3" type="text" placeholder="Иван" name="name" required>
+
+								<label for="email"><b>Адрес почты</b></label>
+								<input class="w-75 p-3" type="text" placeholder="example@domain.com" name="email"
+								       required>
+
+								<div class="custom-control custom-checkbox mb-3">
+									<input type="checkbox" class="custom-control-input" id="customControlValidation1"
+									       required>
+									<label class="custom-control-label" for="customControlValidation1">согласен с пол.
+										конфедициальности</label>
+									<div class="invalid-feedback">Выберите флажок</div>
+								</div>
+							</div>
+
+							<button type="submit" class="w-50 h-75  send">Подать</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+<footer>
+	<div class="row">
+		<div class="col">
+			<h3 class="bd-footer-title"><a class="btn-link" href="https://teleg.run/princepepper" target="_blank">Telegram</a>
+			</h3>
+			<p><a class="btn-link" href="https://www.instagram.com/prince_pepper_official" target="_blank">Instagram</a>
+			</p>
+			<p><a class="btn-link" href="https://vk.com/princepepper" target="_blank">Вконтакте</a></p>
+			<p><a class="btn-link" href="https://ssereda.ru" target="_blank">Сайт</a></p>
+		</div>
+		<div class="col">
+			<h3 class="bd-footer-title"><a class="btn-link" href="#">Связаться</a></h3>
+			<div data-toggle="modal" data-target="#myModal"><span class="badge badge-dark">В разработке</span>
+				<h3 class="bd-footer-title">Новости</h3></div>
+		</div>
+		<div class="col">
+			<h3 class="bd-footer-title"><a class="btn-link" href="#">О себе</a></h3>
+			<p><a class="btn-link" href="#">Факты</a></p>
+			<p><a class="btn-link" href="#">Компетенции</a></p>
+			<span class="badge badge-dark">В разработке</span>
+			<p><a class="btn-link" href="#">Работа</a></p>
+		</div>
+	</div>
+	<p>&copy; <?php echo date('Y');?> Семен Середа</p>
+</footer>
+
+<!-----------------модальное окно---------------------->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel" style="color: black">НОВОСТИ</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body" style="color: black">
+				В данный момент данный блок в разработке.
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

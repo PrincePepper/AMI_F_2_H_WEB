@@ -43,11 +43,9 @@ header {
     padding: 0 var(--space-xs);
     width: 100%;
     background-color: rgba(0, 0, 0, 0.3);
+
 }
 
-main {
-    position: relative;
-}
 
 footer {
     position: relative;
@@ -59,22 +57,8 @@ footer {
     background: rgba(248, 37, 38, 0.5);
 }
 
-/*--------------------------------*/
-
-.gradient {
-    position: relative;
-    /*background:linear-gradient(0deg, #000000, rgba(255, 255, 255, 0));*/
-}
-
-.gradient:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(0deg, #000000, rgba(255, 255, 255, 0));
-    z-index: 2;
+footer p {
+    text-align: center;
 }
 
 /*--------------------------------*/
@@ -96,6 +80,23 @@ h1 {
     background-color: #f82526 !important;
 }
 
+/*--------------------------------*/
+
+.gradient {
+    position: relative;
+}
+
+.gradient:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(0deg, #000000, rgba(255, 255, 255, 0));
+    z-index: 2;
+}
+
 /*--------------------------------------------*/
 
 /* DEMO-SPECIFIC STYLES */
@@ -110,7 +111,7 @@ h1 {
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: .15em; /* Adjust as needed */
-    animation: typing 3.5s steps(30, end);
+    animation: typing 3s steps(30, end);
 }
 
 /* The typing effect */
@@ -119,7 +120,7 @@ h1 {
         width: 0;
     }
     to {
-        width: 37%;
+        width: 737px;
     }
 }
 
@@ -134,37 +135,66 @@ h1 {
 .text-typewriter {
     width: 100%;
     height: 50%;
-
+    top: 0;
+    left: 0;
 }
+
 
 .fact {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 50%;
-    font-family: Consolas, sans-serif;
-    text-align: justify;
+    top: 50%;
+    bottom: 50%;
 }
 
-.fact div {
-    top: 25%;
-    left: 15%;
-    position: absolute;
+.block-fact {
+    position: relative;
+    top: 20%;
+    left: 12.5%;
     background-color: rgba(248, 37, 38, 0.5);
     z-index: 3;
     border-radius: 25px;
-    align-items: center;
-    justify-content: center;
 }
 
-div dl {
+.align_center {
     position: absolute;
-    height: auto;
-    width: 100%;
-    margin: auto;
+    top: 20%;
+    margin: 0;
     padding: 24px;
-    vertical-align: middle;
-    font-size: 5vh;
+    width: auto;
+    height: auto;
+}
 
+/*--------------------------------------------*/
+.competition {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+    vertical-align: center;
+}
+
+.image {
+    width: 100%;
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+
+.image:hover {
+    filter: grayscale(0);
+}
+
+.competition .row {
+    margin: 0 50px;
+    padding-bottom: 80px;
+}
+
+.text-in-column {
+    padding: 16px;
+    margin: 0;
 }
 
 /*--------------------------------------------*/
@@ -186,6 +216,84 @@ div dl {
 }
 
 /*--------------------------------------------*/
+.social-ul li {
+    display: inline;
+}
+
+main div.col {
+    display: block;
+}
+
+/*--------------------------------------------*/
+
+.forms {
+    /*#f82526;*/
+    width: 500px;
+    background-color: #f82526;
+    border-radius: 25px;
+}
+
+/* Add padding to containers */
+.contain {
+    padding: 20px;
+}
+
+.contain div {
+    text-align: left;
+}
+
+.contain label {
+    margin: 5px 0 5px 20%;
+}
+
+/* Full-width input fields */
+input[type=text] {
+    width: 100%;
+    padding: 15px;
+
+    display: block;
+    border: none;
+    border-radius: 15px;
+    background: #ffffff;
+    margin: auto;
+}
+
+input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+    border: 3px solid #ffffff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Set a style for the submit button */
+.send {
+    border-radius: 15px;
+    background-color: #107913;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.send:hover {
+    opacity: 1;
+}
+.custom-checkbox{
+    margin: 5px auto;
+}
+/*--------------------------------------------*/
+
+/*@media (min-width: 992px) {*/
+/*    .container {*/
+/*        max-width: 1140px;*/
+/*    }*/
+/*}*/
 
 @media (max-width: 992px) {
     .def-nav, .loader-container, .loader, .nav-breadcrumb {
