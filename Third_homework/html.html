@@ -7,17 +7,11 @@
 	<!-- Подключаем Bootstrap CSS -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/default.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
-
 <body>
-<!-- Подключаем jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<!-- Подключаем Bootstrap JS -->
-<script src="js/bootstrap.js"></script>
-<script src="js/default.js"></script>
-<!-- -----------Основной код----------- -->
 <!--экран загрузки-->
 <div class="loader-container">
 	<div class="spinner-border text-danger" role="status">
@@ -76,23 +70,25 @@
 
 </header>
 <main>
-	<div class="gradient">
+	<div class="container-gradient-carusel">
 		<div class="text-typewriter">
 			<div class="typewriter">
-				<h1 class="first-typewriter">НЕТ. НИЧЕГО.</h1>
-				<h1 class="second-typewriter">НЕВОЗМОЖНОГО.</h1>
+				<h1>НЕТ. НИЧЕГО.</h1>
+				<h1>НЕВОЗМОЖНОГО.</h1>
 			</div>
 		</div>
+
 		<div class="fact">
-			<div class="block-fact w-75 h-60 shadow-lg">
-				<dl class="align_center align-items-center">
-					<dt>Факты</dt>
-					<dd>Студент 1 курса ДВФУ</dd>
-					<dd>6 год занимаюсь робототехникой</dd>
-					<dd>IT-разработчик стратап проекта</dd>
-					<dd>Фотограф</dd>
-					<dd>программист</dd>
-					<dt>Хобби</dt>
+			<article id="facts"></article>
+			<div class="block-fact w-75 shadow-lg">
+				<dl class="align-center-fact align-items-center">
+					<dt>Факты:</dt>
+					<dd>- Студент 1 курса ДВФУ</dd>
+					<dd>- 6 год занимаюсь робототехникой</dd>
+					<dd>- IT-разработчик стратап проекта</dd>
+					<dd>- Фотограф</dd>
+					<dd>- программист</dd>
+					<dt>Хобби:</dt>
 					<dd>DJ`инг</dd>
 				</dl>
 			</div>
@@ -100,34 +96,36 @@
 		<div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img src="png/first.png" class="d-block w-100" alt="...">
+					<img src="png/first.png" class="d-block w-100">
 				</div>
 				<div class="carousel-item">
-					<img src="png/second.png" class="d-block w-100" alt="...">
+					<img src="png/second.png" class="d-block w-100">
 				</div>
 			</div>
 		</div>
 	</div>
+
 	<div class="competition">
+		<article id="competitions"></article>
 		<div>
 			<h1 class="text-in-column">КОМПЕТЕНЦИИ</h1>
 			<div class="row">
 				<div class="col">
 					<a href="https://vk.com/semensereda" target="_blank" data-toggle="tooltip"
 					   title="Нажми чтобы перейти во кладку">
-						<img src="png/photograph.png" class="image" alt="фотограф"/>
+						<img src="png/photograph.png" class="image-hobby" alt="фотограф"/>
 					</a>
 				</div>
 				<div class="col">
 					<a href="https://github.com/PrincePepper" target="_blank" data-toggle="tooltip"
 					   title="Нажми чтобы перейти во кладку">
-						<img src="png/programmist.png" class="image" alt="программист"/>
+						<img src="png/programmist.png" class="image-hobby" alt="программист"/>
 					</a>
 				</div>
 				<div class="col">
 					<a href="https://vk.com/rutechpark?w=wall-158058510_212" target="_blank" data-toggle="tooltip"
 					   title="Нажми чтобы перейти во кладку">
-						<img src="png/projectactivity.png" class="image" alt="бизнес"/>
+						<img src="png/projectactivity.png" class="image-hobby" alt="бизнес"/>
 					</a>
 				</div>
 			</div>
@@ -143,17 +141,17 @@
 			<p><a class="btn-link" href="https://www.instagram.com/prince_pepper_official" target="_blank">Instagram</a>
 			</p>
 			<p><a class="btn-link" href="https://vk.com/princepepper" target="_blank">Вконтакте</a></p>
-			<p><a class="btn-link" href="https://ssereda.ru" target="_blank">Сайт</a></p>
+			<p><a class="btn-link" href="https://semensereda.space" target="_blank">Сайт-2</a></p>
 		</div>
 		<div class="col">
-			<h3 class="bd-footer-title"><a class="btn-link" href="#">Связаться</a></h3>
+			<h3 class="bd-footer-title"><a class="btn-link" href="html_contact.html">Связаться</a></h3>
 			<div data-toggle="modal" data-target="#myModal"><span class="badge badge-dark">В разработке</span>
 				<h3 class="bd-footer-title">Новости</h3></div>
 		</div>
 		<div class="col">
-			<h3 class="bd-footer-title"><a class="btn-link" href="#">О себе</a></h3>
-			<p><a class="btn-link" href="#">Факты</a></p>
-			<p><a class="btn-link" href="#">Компетенции</a></p>
+			<h3 class="bd-footer-title"><a class="btn-link" href="html_about.html">О себе</a></h3>
+			<p><a href="#facts">Факты</a></p>
+			<p><a class="btn-link" href="#competitions">Компетенции</a></p>
 			<span class="badge badge-dark">В разработке</span>
 			<p><a class="btn-link" href="#">Работа</a></p>
 		</div>
@@ -167,8 +165,11 @@
     });
 </script>
 <!----------------------------------------------------->
+<!-------------- Подключаем Bootstrap JS -------------->
+<script src="js/bootstrap.js"></script>
+<script src="js/default.js"></script>
 
-<!-----------------мрдальное окно---------------------->
+<!-----------------мордальное окно--------------------->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">

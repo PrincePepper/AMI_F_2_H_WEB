@@ -359,7 +359,7 @@ div.left ul {
     padding: 0;
 }
 
-.image {
+.image-hobby {
     width: 100%;
     max-width: 250px;
     margin: 10px 10px 10px 10px;
@@ -367,7 +367,7 @@ div.left ul {
     transition: 0.5s;
 }
 
-.image:hover {
+.image-hobby:hover {
     filter: grayscale(0);
 }
 
