@@ -23,7 +23,7 @@
 		<nav aria-label="breadcrumb" class="nav-breadcrumb">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item" aria-current="page">Главная</li>
-				<li class="breadcrumb-item active" aria-current="page">Контакты</li>
+				<li class="breadcrumb-item active" aria-current="page">Медиа</li>
 			</ol>
 		</nav>
 		<nav class="def-nav mx-auto">
@@ -32,13 +32,13 @@
 					<a class="nav-link" href="html.html"><h2>SEMEN</h2></a>
 				</li>
 				<li class="nav-item mx-auto">
-					<a class="nav-link active" href="html_contact.html"><h2>СВЯЗАТЬСЯ</h2></a>
+					<a class="nav-link" href="html_contact.html"><h2>СВЯЗАТЬСЯ</h2></a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="html_about.html"><h2>О СЕБЕ</h2></a>
 				</li>
 				<li class="nav-item  mx-0">
-					<a class="nav-link rounded-pill border" href="html_media.html"><h2>ПРОЕКТЫ</h2></a>
+					<a class="nav-link rounded-pill border active" href="html_media.html"><h2>ПРОЕКТЫ</h2></a>
 				</li>
 			</ul>
 
@@ -55,66 +55,98 @@
 						<a class="nav-link" href="html.html"><h2>ГЛАВНАЯ</h2></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link active" href="html_contact.html"><h2>СВЯЗАТЬСЯ</h2></a>
+						<a class="nav-link" href="html_contact.html"><h2>СВЯЗАТЬСЯ</h2></a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="html_about.html"><h2>О СЕБЕ</h2></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="html_media.html"><h2>ПРОЕКТЫ</h2></a>
+						<a class="nav-link active" href="html_media.html"><h2>ПРОЕКТЫ</h2></a>
 					</li>
 				</ul>
 			</div>
 		</nav>
 	</div>
-
 </header>
-<main class="main-contact">
-	<div class="container">
-		<div class="row align-items-center">
-			<div class="col-8">
-				<ul class="social-ul">
-					<li>
-						<a href="https://teleg.run/princepepper" target="_blank">
-							<img alt="telegram" src="png/telegram.png"/>
-						</a>
-					</li>
-					<li>
-						<a href="https://www.instagram.com/prince_pepper_official/" target="_blank">
-							<img alt="instagram" src="png/instagram.png"/>
-						</a>
-					</li>
-					<li>
-						<a href="https://vk.com/princepepper" target="_blank">
-							<img alt="vk" src="png/vk.png"/>
-						</a>
-					</li>
-				</ul>
+<main>
+	<div class="accordion" id="accordionExample">
+		<div class="card">
+			<div class="card-header" id="headingOne">
+				<h5 class="mb-0">
+					<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+					        aria-expanded="true" aria-controls="collapseOne">
+						Команда
+					</button>
+				</h5>
 			</div>
-			<div class="col-4">
-				<div class="forms">
-					<form action="php/action_page.php">
-						<div class="contain">
-							<h3>Сообщи почту и я вам отвечу</h3>
-							<hr class="w-50">
-							<div>
-								<label><b>Имя</b></label>
-								<input class="w-75 p-3" type="text" placeholder="Иван" name="name" required>
-								<label><b>Адрес почты</b></label>
-								<input class="w-75 p-3" type="text" placeholder="example@domain.com" name="email"
-								       required>
-								<div class="custom-control custom-checkbox mb-3">
-									<input type="checkbox" class="custom-control-input" id="customControlValidation1"
-									       required>
-									<label class="custom-control-label" for="customControlValidation1">согласен с пол.
-										конфедициальности</label>
-									<div class="invalid-feedback">Выберите флажок</div>
-								</div>
-							</div>
 
-							<button type="submit" class="w-50 h-75  send">Подать</button>
-						</div>
-					</form>
+			<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+				<div class="card-body">
+					<h2 class="text-center">Команда проекта</h2>
+					<div class="container-fluid">
+						<table class="table">
+							<thead>
+							<tr>
+								<th scope="col">#</th>
+								<th scope="col">Имя</th>
+								<th scope="col">Специальность</th>
+								<th scope="col">Должность в проекте</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>Семен</td>
+								<td>Прикладная математика и информатика</td>
+								<td>Специалист по ИТ</td>
+							</tr>
+							<tr>
+								<th scope="row">2</th>
+								<td>Александр</td>
+								<td>Экономическая безопасноть</td>
+								<td>Командир команды</td>
+							</tr>
+							<tr>
+								<th scope="row">3</th>
+								<td>Диана</td>
+								<td>Экономика и мэнеджемент</td>
+								<td>Специалист по бизнес-планированию</td>
+							</tr>
+							<tr>
+								<th scope="row">4</th>
+								<td>Евгений</td>
+								<td>Строитель</td>
+								<td>Специалист по CAD-моделированию</td>
+							</tr>
+							<tr>
+								<th scope="row">5</th>
+								<td>Вячеслав</td>
+								<td>Робототехника</td>
+								<td>Специалист по техническим разработкам</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header" id="headingTwo">
+				<h5 class="mb-0">
+					<button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+					        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						Видео
+					</button>
+				</h5>
+			</div>
+			<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+				<div class="card-body">
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/pSs9NG35vSk"
+						        frameborder="0"
+						        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						        allowfullscreen></iframe>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -166,7 +198,5 @@
 		</div>
 	</div>
 </div>
-
-
 </body>
 </html>

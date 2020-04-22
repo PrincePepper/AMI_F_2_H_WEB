@@ -219,11 +219,22 @@ h1 {
 .social-ul li {
     display: inline;
 }
-
-main div.col {
-    display: block;
+.social-ul img{
+    height: 120px;
+    width: 120px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
+.main-contact{
+    height: 800px;
+}
+.main-contact .container{
+    height: 100%;
+}
+.main-contact .container .row{
+    height: 100%;
+}
 /*--------------------------------------------*/
 
 .forms {
@@ -284,16 +295,29 @@ hr {
 .send:hover {
     opacity: 1;
 }
-.custom-checkbox{
+
+.custom-checkbox {
     margin: 5px auto;
 }
-/*--------------------------------------------*/
 
-/*@media (min-width: 992px) {*/
-/*    .container {*/
-/*        max-width: 1140px;*/
-/*    }*/
-/*}*/
+/*--------------------------------------------*/
+.card {
+    background-color: black;
+}
+
+.card h5 {
+    text-align: center;
+}
+
+.table {
+    color: white;
+}
+
+.owl-carousel .item-video {
+    height: 300px;
+}
+
+/*--------------------------------------------*/
 
 @media (max-width: 992px) {
     .def-nav, .loader-container, .loader, .nav-breadcrumb {
@@ -305,6 +329,38 @@ hr {
     }
 
 }
+
+@media (max-width: 780px) {
+    footer {
+        max-width: 780px;
+        padding: 0;
+    }
+
+    .text-typewriter {
+        display: none;
+    }
+
+    h1, .h1 {
+        font-size: 2rem;
+    }
+
+    h2, .h2 {
+        font-size: 1.75rem;
+    }
+
+    h3, .h3 {
+        font-size: 1.5rem;
+    }
+
+    h4, .h4 {
+        font-size: 1.25rem;
+    }
+
+    h5, .h5 {
+        font-size: 1rem;
+    }
+}
+
 
 @media (min-width: 992px) {
     .alt-nav {
