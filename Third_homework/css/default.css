@@ -21,6 +21,19 @@ footer {
     flex: 1 0 auto;
 }
 
+/*-------2-x уровневое меню---------*/
+
+.dropdown .dropdown:hover > .dropdown-menu {
+    display: block;
+    left: 100%;
+    top: calc(0% - 5px);
+}
+
+/*--------------------------------*/
+.svg-block {
+    margin: 30px;
+}
+
 /*--------------------------------*/
 
 body::-webkit-scrollbar {
