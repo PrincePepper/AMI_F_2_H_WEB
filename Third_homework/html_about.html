@@ -1,23 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-	<title>SEMEN</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<!-- Подключаем Bootstrap CSS -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/default.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+	<title>SEMEN</title>
 </head>
-
 <body>
-<!-- Подключаем jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<!-- Подключаем Bootstrap JS -->
-<script src="js/bootstrap.js"></script>
-<script src="js/default.js"></script>
-<!-- -----------Основной код----------- -->
+<!--экран загрузки-->
+<div class="loader-container">
+	<div class="spinner-border text-danger" role="status">
+		<span class="sr-only">Loading...</span>
+	</div>
+</div>
 <header>
 	<div class="full-header fixed-top">
 		<nav aria-label="breadcrumb" class="nav-breadcrumb">
@@ -29,15 +27,15 @@
 		<nav class="def-nav mx-auto">
 			<ul class="nav">
 				<li class="nav-item mx-0">
-					<a class="nav-link" href="html.html"><h2>SEMEN</h2></a>
+					<a class="nav-link active" href="html.html"><h2>SEMEN</h2></a>
 				</li>
 				<li class="nav-item mx-auto">
 					<a class="nav-link" href="html_contact.html"><h2>СВЯЗАТЬСЯ</h2></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link active" href="html_about.html"><h2>О СЕБЕ</h2></a>
+					<a class="nav-link" href="html_about.html"><h2>О СЕБЕ</h2></a>
 				</li>
-				<li class="nav-item mx-0 ">
+				<li class="nav-item  mx-0">
 					<a class="nav-link rounded-pill border" href="html_media.html"><h2>ПРОЕКТЫ</h2></a>
 				</li>
 			</ul>
@@ -52,13 +50,13 @@
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav">
 					<li class="nav-item">
-						<a class="nav-link" href="html.html"><h2>ГЛАВНАЯ</h2></a>
+						<a class="nav-link active" href="#"><h2>ГЛАВНАЯ</h2></a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="html_contact.html"><h2>СВЯЗАТЬСЯ</h2></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link active" href="html_about.html"><h2>О СЕБЕ</h2></a>
+						<a class="nav-link" href="html_about.html"><h2>О СЕБЕ</h2></a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="html_media.html"><h2>ПРОЕКТЫ</h2></a>
@@ -69,37 +67,29 @@
 	</div>
 
 </header>
-<main>
-	<div class="media">
+
+<main class="m-auto">
+	<div class="media" style="margin-top: 15px">
 		<img src="png/youtube-64.png" class="mr-3" alt="...">
 		<div class="media-body">
-			<h5 class="mt-0">Youtube</h5>
+			<h3 class="mt-0">Youtube</h3>
 			Очень много смотрю видео.
 		</div>
 	</div>
 	<div class="media">
 		<img src="png/sound-64.png" class="mr-3" alt="...">
 		<div class="media-body">
-			<h5 class="mt-0">Media heading</h5>
+			<h3 class="mt-0">Меломан</h3>
 			24/7 слушаю музыку.
 		</div>
 	</div>
-
-	<a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">About me
-		<span class="caret"></span></a>
-	<ul class="dropdown-menu">
-		<li class="dropdown"><a class="dropdown-toggle">Social
-			<span class="caret caret-right"></span></a>
-			<ul class="dropdown-menu">
-				<li class=""><a href="https://vk.com/banysk" target="_blank">Vk</a></li>
-				<li class=""><a href="https://steamcommunity.com/id/banySK" target="_blank">Steam</a>
-				</li>
-				<li class=""><a href="https://www.instagram.com/bany.sk/" target="_blank">Instagram</a>
-				</li>
-			</ul>
-		</li>
-		<li class="disabled"><a class="nav-link" data-toggle="tab" href="#">Wait...</a></li>
-	</ul>
+	<div class="media">
+		<img src="png/rick-64.png" class="mr-3" alt="...">
+		<div class="media-body">
+			<h3 class="mt-0">Rick and Morty</h3>
+			Люблю смотреть и пересматривать серии Рика и Морти. Как же без огурчика Рика!
+		</div>
+	</div>
 </main>
 
 <footer>
@@ -107,33 +97,33 @@
 		<div class="col">
 			<h3 class="bd-footer-title"><a class="btn-link" href="https://teleg.run/princepepper" target="_blank">Telegram</a>
 			</h3>
-			<p><a class="btn-link" href="https://www.instagram.com/prince_pepper_official" target="_blank">Instagram</a>
+			<p><a class="btn-link" href="https://www.instagram.com/prince_pepper_official"
+			      target="_blank">Instagram</a>
 			</p>
 			<p><a class="btn-link" href="https://vk.com/princepepper" target="_blank">Вконтакте</a></p>
-			<p><a class="btn-link" href="https://ssereda.ru" target="_blank">Сайт</a></p>
+			<p><a class="btn-link" href="https://semensereda.space" target="_blank">Сайт-2</a></p>
 		</div>
 		<div class="col">
-			<h3 class="bd-footer-title"><a class="btn-link" href="#">Связаться</a></h3>
+			<h3 class="bd-footer-title"><a class="btn-link" href="html_contact.html">Связаться</a></h3>
 			<div data-toggle="modal" data-target="#myModal"><span class="badge badge-dark">В разработке</span>
 				<h3 class="bd-footer-title">Новости</h3></div>
 		</div>
 		<div class="col">
-			<h3 class="bd-footer-title"><a class="btn-link" href="#">О себе</a></h3>
-			<p><a class="btn-link" href="#">Факты</a></p>
-			<p><a class="btn-link" href="#">Компетенции</a></p>
-			<span class="badge badge-dark">В разработке</span>
-			<p>Работа</p>
+			<h3 class="bd-footer-title"><a class="btn-link" href="html_about.html">О себе</a></h3>
+			<p><a href="html.html">Факты</a></p>
+			<p><a class="btn-link" href="html.html">Компетенции</a></p>
+			<div data-toggle="modal" data-target="#myModal"><span class="badge badge-dark">В разработке</span>
+				<p class="bd-footer-title">Работа</p></div>
 		</div>
 	</div>
 	<p>&copy; <?php echo date('Y');?> Семен Середа</p>
 </footer>
 
-<!-----------------модальное окно---------------------->
+<!-----------------мордальное окно--------------------->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabel" style="color: black">НОВОСТИ</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -147,5 +137,18 @@
 		</div>
 	</div>
 </div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+<!-------------- Подключаем Bootstrap JS -------------->
+<script src="js/bootstrap.js"></script>
+<script src="js/default.js"></script>
 </body>
 </html>
