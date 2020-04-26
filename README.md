@@ -14,8 +14,5 @@ first_course_web
 * [Pastebin](https://pastebin.com/) - предназначен для передачи кода, но менее удобен
 * [Руководство по стилю написания кода на С](https://cs50.readthedocs.io/style/c/)
 * [Лекции и задания](https://drive.google.com/drive/folders/1Ak_KUllhSS9cN0CvasTZtLKBZ_HqTpZ7?usp=sharing)
-##### Репозитории хороших  людей:
-1. [Алексей Шуров](https://github.com/alexiskhb)
-2. [Александр Кленин](https://github.com/klenin)
-3. [Игорь Блинов](h)
-4. [Александр Матафонов](https://vk.com/mafandv)(ВК)
+##### Преподователь(и):
+[Александр Матафонов](https://vk.com/mafandv)
