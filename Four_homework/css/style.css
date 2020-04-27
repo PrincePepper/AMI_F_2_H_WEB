@@ -1,6 +1,62 @@
+/*----------привяка footer к низу экрана--------------*/
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+header {
+    flex: 1 0 auto;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex: 1 0 auto;
+}
+
+/*-----------------------main--------------------------*/
+.jumbotron {
+    background-color: #9a63ff;
+    text-align: center;
+    padding:5px 32px;
+}
+.javascript-text{
+    background-color: orange;
+}
+.container{
+    max-width: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+label{
+     display: inline;
+}
+.btn{
+    margin-bottom: 15px;
+}
+div svg{
+    height: 500px;
+    width: 500px;
+}
+/*-----------------------------------------------------*/
+.display-5 {
+    font-size: 3.5rem;
+    font-weight: 100;
+    line-height: 1.2;
+}
+
 footer {
     color: #999; /* IE8 proofing */
     color: rgba(255, 255, 255, .5);
+    background-color: #9a63ff;
+    text-align: center;
 }
 
 .inner {
