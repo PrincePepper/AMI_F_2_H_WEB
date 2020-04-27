@@ -1,0 +1,24 @@
+footer {
+    color: #999; /* IE8 proofing */
+    color: rgba(255, 255, 255, .5);
+}
+
+.inner {
+    padding: 30px;
+}
+
+a,
+a:focus,
+a:hover {
+    color: #ffffff;
+    transition: 0.2s;
+    -moz-transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+}
+
+a:focus,
+a:hover {
+    opacity: .7;
+    text-decoration: none;
+}
