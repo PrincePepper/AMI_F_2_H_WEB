@@ -62,10 +62,11 @@ $("form").submit(function () {
     let table = $('<table id="tabb"/>')
     let columnsCount = 8;
     let rowsCount = 5;
-    for (let i = 0; i < rowsCount; i++) {
-        let row = $('<tr/>')
-        for (let j = 0; j < columnsCount; j++) {
-            let cell = $('<td/>')
+    for (var i = 0; i < rowsCount; i++) {
+        var row = $('<tr/>')
+
+        for (var j = 0; j < columnsCount; j++) {
+            var cell = $('<td/>')
             if (i_v) {
                 cell.html(getRandomInt(parseInt(i_v), parseInt(x_v)))
 
@@ -73,9 +74,15 @@ $("form").submit(function () {
                 cell.html(getRandomInt(parseInt(i2.attr('placeholder')), parseInt(x.attr('placeholder'))))
             }
 
+            row.append(cell)
         }
+
         table.append(row)
     }
+
+    table.appendTo('body')
     table.appendTo('#table')
+
+    return false;
 
 });
