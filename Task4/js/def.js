@@ -59,30 +59,39 @@ $("form").submit(function () {
     } else $('#answer-fib').text(fib(f.attr('placeholder')));
 
 
-    let table = $('<table id="tabb"/>')
+    let table = $('<table class="tabb shadow-lg p-3 mb-5 bg-white rounded"/>')
     let columnsCount = 8;
     let rowsCount = 5;
+    let arrmin = new Array(0)
+    let arrmax = new Array(0)
+
     for (var i = 0; i < rowsCount; i++) {
         var row = $('<tr/>')
-
         for (var j = 0; j < columnsCount; j++) {
-            var cell = $('<td/>')
+            var cell = $('<td />')
             if (i_v) {
-                cell.html(getRandomInt(parseInt(i_v), parseInt(x_v)))
-
+                let i_v_2 = getRandomInt(parseInt(i_v), parseInt(x_v))
+                cell.html(i_v_2)
+                if (i_v_2 >= 0) {
+                    arrmax.push(i_v_2)
+                } else arrmin.push(i_v_2)
             } else {
-                cell.html(getRandomInt(parseInt(i2.attr('placeholder')), parseInt(x.attr('placeholder'))))
+                let i_v_3 = getRandomInt(parseInt(i2.attr('placeholder')), parseInt(x.attr('placeholder')))
+                cell.html(i_v_3)
+                if (i_v_3 >= 0) {
+                    arrmax.push(i_v_3)
+                } else arrmin.push(i_v_3)
             }
-
             row.append(cell)
         }
-
         table.append(row)
     }
-
-    table.appendTo('body')
     table.appendTo('#table')
 
-    return false;
 
+    console.log(arrmax)
+    console.log(arrmin)
+    $('#first').text(arrmax)
+    $('#second').text(arrmin)
+    return false;
 });

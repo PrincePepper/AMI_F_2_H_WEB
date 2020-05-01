@@ -25,26 +25,32 @@ footer {
 .jumbotron {
     background-color: #9a63ff;
     text-align: center;
-    padding:5px 32px;
+    padding: 5px 32px;
 }
-.javascript-text{
+
+.javascript-text {
     background-color: orange;
 }
-.container{
+
+.container {
     max-width: 100%;
     margin-right: 10px;
     margin-left: 10px;
 }
-label{
-     display: inline;
+
+label {
+    display: inline;
 }
-.btn{
+
+.btn {
     margin-bottom: 15px;
 }
-div svg{
+
+div svg {
     height: 500px;
     width: 500px;
 }
+
 /*-----------------------------------------------------*/
 .display-5 {
     font-size: 3.5rem;
@@ -77,4 +83,32 @@ a:focus,
 a:hover {
     opacity: .7;
     text-decoration: none;
+}
+
+.tabb {
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+
+}
+
+.tabb td {
+    padding: 5px;
+}
+
+div span {
+    color: #9a63ff;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    vertical-align: center;
+}
+
+#first, #second {
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+}
+
+#first::after, #second::after {
+    display: none;
 }
