@@ -22,6 +22,10 @@ footer {
 }
 
 /*-----------------------main--------------------------*/
+body {
+    background-color: #bc9cff;
+}
+
 .jumbotron {
     background-color: #9a63ff;
     text-align: center;

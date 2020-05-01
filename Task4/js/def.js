@@ -12,7 +12,6 @@ function getRandomInt(min, max) {
     return Math.floor(rand);
 }
 
-
 $('#inputraduis').focus();
 
 $("form").submit(function () {
@@ -26,6 +25,10 @@ $("form").submit(function () {
     let i_v = i2.val();
     let x_v = x.val();
 
+    if (c_v < 0 || f_v < 0 || i_v < 0 || x_v < 0) {
+        alert("Ошибка ввода. Повторите ввод");
+        return false;
+    }
 
     const cir1 = document.createElementNS("http://www.w3.org/2000/svg", "circle");
     cir1.setAttribute("cx", "500");
@@ -38,10 +41,7 @@ $("form").submit(function () {
     }
     if (c_v) {
         if (c_v > 500) c_v = 500;
-        if (c_v < 0) {
-            c_v = 0;
-            alert("Ошибка ввода");
-        }
+
         cir1.setAttribute("r", c_v);
 
         $('.answer-circle').text(calculateCir(c_v));
@@ -59,17 +59,20 @@ $("form").submit(function () {
     } else $('#answer-fib').text(fib(f.attr('placeholder')));
 
 
+//-----------------------------------------------------------------------------------------------------------------
+    let divfour = $('<div id="allfour" style="display: flex"/>')
+    let div = $('<div/>')
     let table = $('<table class="tabb shadow-lg p-3 mb-5 bg-white rounded"/>')
     let columnsCount = 8;
     let rowsCount = 5;
     let arrmin = new Array(0)
     let arrmax = new Array(0)
 
-    for (var i = 0; i < rowsCount; i++) {
-        var row = $('<tr/>')
-        for (var j = 0; j < columnsCount; j++) {
-            var cell = $('<td />')
-            if (i_v) {
+    for (let i = 0; i < rowsCount; i++) {
+        let row = $('<tr/>')
+        for (let j = 0; j < columnsCount; j++) {
+            let cell = $('<td />')
+            if (i_v && x_v) {
                 let i_v_2 = getRandomInt(parseInt(i_v), parseInt(x_v))
                 cell.html(i_v_2)
                 if (i_v_2 >= 0) {
@@ -86,12 +89,20 @@ $("form").submit(function () {
         }
         table.append(row)
     }
-    table.appendTo('#table')
+    div.append(table)
+    div.appendTo(divfour)
 
+    let massmin = $('<div class="tabb shadow-lg p-3 mb-5 bg-white rounded"/>')
+    let massmax = $('<div class="tabb shadow-lg p-3 mb-5 bg-white rounded"/>')
+    let divmass = $('<div/>')
+    massmin.html(arrmin + "")
+    massmin.appendTo(divmass)
 
-    console.log(arrmax)
-    console.log(arrmin)
-    $('#first').text(arrmax)
-    $('#second').text(arrmin)
+    massmax.html(arrmax + "")
+    massmax.appendTo(divmass)
+    divmass.appendTo(divfour)
+    divfour.appendTo('#four')
+//-----------------------------------------------------------------------------------------------------------------
+
     return false;
 });
