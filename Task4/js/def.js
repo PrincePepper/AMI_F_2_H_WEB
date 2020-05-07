@@ -25,7 +25,7 @@ $("form").submit(function () {
     let i_v = i2.val();
     let x_v = x.val();
 
-    if (c_v < 0 || f_v < 0 || i_v < 0 || x_v < 0) {
+    if (c_v < 0 || f_v < 0 || x_v < 0) {
         alert("Ошибка ввода. Повторите ввод");
         return false;
     }

@@ -1,6 +1,6 @@
 function getRandomInt(min, max) {
     // случайное число от min до (max+1)
-    let rand = min + Math.random() * (max + 1 - min);
+    let rand = min + Math.random() * (max - min);
     return Math.floor(rand);
 }
 
@@ -13,6 +13,7 @@ function getArray(n, min, max) {
 }
 
 function compareNumeric(a, b) {
+    return a - b;
     if (a > b) return 1
     if (a === b) return 0
     if (a < b) return -1
@@ -20,7 +21,7 @@ function compareNumeric(a, b) {
 
 function getResultArray(mass) {
     if (mass.length > 0) {
-        return mass.sort(compareNumeric)
+        return mass.sort((a, b) => a - b)
     }
 }
 
@@ -30,14 +31,13 @@ $("form").submit(function () {
     let max = $('#min')
     let min = $('#max')
 
-    if (n < 0 || max < 0 || min < 0) {
+    if (n < 0 || max < 0) {
         alert("Ошибка ввода. Повторите ввод");
         return false;
     }
 
     let aaa = getResultArray(getArray(n * n, min.attr('placeholder'), max.attr('placeholder')))
     console.log(aaa)
-
     let c = 0;
     let matrix = new Array(n);
     for (let i = 0; i < n; i++) {
