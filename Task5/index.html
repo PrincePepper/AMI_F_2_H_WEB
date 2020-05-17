@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>5.1 и 5.2</title>
+</head>
+<body>
+<script>
+    let m = [
+        {
+            text: 'Животные',
+            children: [
+                {
+                    text: 'Млекопитающий',
+                    children:
+                        [
+                            {
+                                text: 'Коровы',
+                                children: []
+                            },
+                            {
+                                text: 'Ослы',
+                                children: []
+                            },
+                            {
+                                text: 'Собаки',
+                                children: []
+                            },
+                            {
+                                text: 'Тигры',
+                                children: []
+                            }
+                        ]
+                },
+                {
+                    text: 'Другие',
+                    children: [
+                        {
+                            text: 'Змеи',
+                            children: []
+                        },
+                        {
+                            text: 'Птицы',
+                            children: []
+                        },
+                        {
+                            text: 'Ящерицы',
+                            children: []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            text: 'Рыбы',
+            children: [
+                {
+                    text: 'Аквариумные',
+                    children: [
+                        {
+                            text: 'Гуппи',
+                            children: []
+                        },
+                        {
+                            text: 'Скалярии',
+                            children: []
+                        }
+                    ]
+                },
+                {
+                    text: 'Морские',
+                    children: [
+                        {
+                            text: 'Морская форель',
+                            children: []
+                        }
+                    ]
+                }
+            ]
+        }
+    ];
+    //-------------------------Первое задание-----------------------
+
+    //-----------------Создание Таблицы с животными-----------------
+
+    function MakeTable(arr) {
+        let li = document.createElement("li");
+        li.innerText = arr.text;
+        if (arr.children.length !== 0) {
+            let ul = document.createElement("ul");
+            for (let i = 0; i < arr.children.length; i++) {
+                ul.append(MakeTable(arr.children[i]));
+            }
+            li.append(ul);
+        }
+        return li;
+    }
+
+    //--------------------------------------------------------------
+    //---------------Вывод информации в Console---------------------
+    function GetInformationForChild(arr) {
+        let information = {node: arr};
+        console.log(information);
+        for (let i = 0; i < arr.children.length; i++) {
+            GetInformationForChild(arr.children[i]);
+        }
+    }
+
+    function ConsolePrint(doc) {
+        if (doc.childNodes === undefined) return
+        for (let i of doc.childNodes) {
+            console.log(i.nodeName, i.nodeValue)
+            ConsolePrint(i)
+        }
+    }
+
+    //--------------------------------------------------------------
+
+    let ul = document.createElement("ul");
+    for (let i = 0; i < m.length; i++) {
+        ul.append(MakeTable(m[i]));
+    }
+
+    //------Новый контент будет вставлен до указанного в target-----
+    document.body.insertBefore(ul, document.getElementsByTagName("script")[0]);
+
+    //------2 cпособа вывода в консоль-----
+    GetInformationForChild(document.documentElement);
+    console.log("\n\n\n\n----------------------------------------------------------------------------------\n\n\n\n")
+    ConsolePrint(document);
+</script>
+</body>
+</html>
