@@ -1,0 +1,19 @@
+body {
+    background: black;
+}
+
+canvas {
+    position: relative;
+    z-index: 0;
+}
+
+form {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+}
+label{
+
+    color: white;
+}
