@@ -94,19 +94,21 @@
             else if (child.children !== undefined)
                 li.append(Create(child.children))
 
-            li.on('click', function () {
+            li.click(function () {
                 $(this.firstElementChild).slideToggle(500)
                 return false
             })
-
             ul.append(li)
         }
         return ul
     }
+    $('li').click();
 
     $("body").append(Create(m))
     $("li").each(function () {
-        let text = $(this).clone("text","text").children("ul").end()
+        let text = $(this).children("ul");
+
+        console.log(text);
         console.log("Содержание элемента:\n" + text.text() + "\r\nКоличество вложенных: " + $(this).find("li").length);
     });
 </script>
