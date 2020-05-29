@@ -107,12 +107,9 @@
     $("body").append(Create(m))
     $("li").each(function () {
         let text = $(this).children("ul");
-
         console.log(text);
         console.log("Содержание элемента:\n" + text.text() + "\r\nКоличество вложенных: " + $(this).find("li").length);
     });
 </script>
 </body>
 </html>
-
-
