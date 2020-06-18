@@ -5,7 +5,7 @@ const minParameter = 5,
     minN = 3,
     maxN = 1000,
     bgCol = '#ffffff',
-    count = 10;
+    count = 15;
 
 const directions = [
     // top
@@ -126,7 +126,7 @@ function randomFigure() {
     return Math.floor(Math.random() * ClassesOfFigures.length);
 }
 
-function randomCoord(parameter) {
+function Coordination(parameter) {
     return (minParameter) + Math.floor(Math.random() * (parameter - (maxParameter + minParameter)))
 }
 
@@ -137,7 +137,7 @@ function init() {
         drawBack(context, bgCol, canvas.width, canvas.height);
         figures = [];
         for (let i = 0; i < count; i++) {
-            let item = new ClassesOfFigures[randomFigure()](randomCoord(canvas.width), randomCoord(canvas.height));
+            let item = new ClassesOfFigures[randomFigure()](Coordination(canvas.width), Coordination(canvas.height));
             item.draw(context);
             figures.push(item);
         }
@@ -154,7 +154,7 @@ function hypotenuse(k1, k2) {
     return Math.floor(Math.sqrt(Math.pow(k1, 2) + Math.pow(k2, 2)));
 }
 
-function inPoly(poly, x, y) {
+function DeleteF(poly, x, y) {
     let check = 0;
     x = Math.floor(x);
     y = Math.floor(y);
@@ -198,7 +198,7 @@ function collision(figure) {
             ) {
                 let [pointsFigure, pointsOpponent] = [figure.getPoints(), opponent.getPoints()];
                 for (let point of pointsFigure) {
-                    if (inPoly(pointsOpponent, point[0], point[1])) {
+                    if (DeleteF(pointsOpponent, point[0], point[1])) {
                         figures.splice(figures.indexOf(figure), 1);
                         figures.splice(figures.indexOf(opponent), 1);
                         return;
@@ -217,7 +217,7 @@ function collision(figure) {
                     let tmp = hypotenuse(pointsOfpoly[i][0] - ball.posX, pointsOfpoly[i][1] - ball.posY);
                     distance = tmp < distance ? tmp : distance;
                 }
-                if (ball.parameter >= distance || inPoly(pointsOfpoly, ball.posX, ball.posY)) {
+                if (ball.parameter >= distance) {
                     figures.splice(figures.indexOf(poly), 1);
                     figures.splice(figures.indexOf(ball), 1);
                     return;
@@ -282,7 +282,7 @@ function move(direction) {
         for (let i = 0; i < figures.length; i++)
             figures[i].direction = Math.floor(Math.random() * 4);
     }
-    idTimer = setInterval(moveFigure, 100, direction);
+    idTimer = setInterval(moveFigure, 50, direction);
 }
 
 function faster() {
@@ -305,6 +305,6 @@ function addFigures() {
         return;
     }
     for (let i = 0; i < count; i++) {
-        goInput(randomCoord(canvas.width), randomCoord(canvas.height));
+        goInput(Coordination(canvas.width), Coordination(canvas.height));
     }
 }

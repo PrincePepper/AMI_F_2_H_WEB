@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+	      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<script type="text/javascript"
+	        src="https://cdnjs.cloudflare.com/ajax/libs/mootools/1.6.0/mootools-core.js"></script>
+	<title>Title</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="start();">
+<!--экран загрузки-->
+<div class="loader-container">
+	<div class="spinner-border text-danger" role="status"></div>
+</div>
+<div id="fon"></div>
+<canvas id="canvas" onclick="shoot();" onmousemove="getMousePos(event)"></canvas>
+
+<!-- Правила -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Правила</h5>
+			</div>
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+				1)У тебя есть 5 жизней. Потеряешь их все - конец игры.<br><br>
+				2)Скорость врагов и их количество увеличивается с каждым убитым врагом.<br><br>
+				3)В игре есть Боссы которые не уничтожаются с первого выстрела, они также стреляют и в тебя. У каждого
+				врага своя скорость и количество очков за уничтожение.<br><br>
+				5)Выстрелы бесконечные, но есть перезарядка, благодаря бонусам ты можешь ее ускорить<br><br>
+				6)Чтобы уничтожить врага, нужно целится в них<br><br>
+				Удачной игры!
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+<script src='https://unpkg.com/trianglify@^4/dist/trianglify.bundle.js'></script>
+<script src="js/menu.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
